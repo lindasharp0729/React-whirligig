@@ -1,6 +1,4 @@
-/* eslint-disable react/prop-types */
 
-import * as React from 'react'
 
 const Slide = ({
   basis = '100%',
@@ -17,12 +15,10 @@ const Slide = ({
       marginLeft: gutter,
     }}
 
-    {...props}
-
+    
   >
 
-    {children}
-    
+
   </div>
 )
 

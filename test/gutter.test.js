@@ -1,6 +1,5 @@
 
 
-import * as React from 'react'
 import { mount } from 'enzyme'
 import Track from '../src/whirligig'
 
@@ -31,9 +30,11 @@ test('gutter prop', () => {
     })
 
   let errorLog = []
+  
   console.error = (...msgs) => {
     errorLog = [...errorLog, ...msgs]
   }
+
   gutterTrack(1)
   
 })
