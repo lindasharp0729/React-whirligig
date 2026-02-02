@@ -21,6 +21,8 @@ const Slider = ({ slideIndex }) => (
       <img src="http://www.fillmurray.com/400/200" />
       <img src="http://www.fillmurray.com/200/400" />
       <img src="http://www.fillmurray.com/500/300" />
+      <img src="http://www.fillmurray.com/500/300" />
+      <img src="http://www.fillmurray.com/300/400" />
     </Whirligig>
   </div>
 )
@@ -180,8 +182,8 @@ transition to the end of the whirligig If already at the end of the whirligig, c
 ### `prev: () => Promise<*>`
 
 Recedes the whirligig to the previous set of visible slides. If there are not enough
-remaining slides to transition the full number of visible slides, it will
-transition to the beginning of the whirligig If already at the beginning of the
+remaining slides to transition the full number of visible slides, it  will
+transition to the beginning of the whirligig If already  at the beginning of the
 whirligig, calling `prev` will transition the whirligig to last full set of visible
 slides in the whirligig.
 
