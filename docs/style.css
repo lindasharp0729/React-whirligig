@@ -24,7 +24,9 @@ input {
 figure { margin: 0; }
 
 .line { display: block; }
+
 .align-left { text-align: left; }
+
 .align-right { text-align: right; }
 
 .mySlide {
@@ -35,6 +37,7 @@ figure { margin: 0; }
   justify-content: center;
   height: 100%;
 }
+
 .mySlide img {
   width: 100%;
 }
