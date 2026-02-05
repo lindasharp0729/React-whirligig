@@ -138,7 +138,9 @@ const supportsPassive = () => {
     window.addEventListener('__rw_test__', null, { passive: true })
     window.removeEventListener('__rw_test__', null)
     return true
-  } catch {
+  } 
+  catch 
+  {
     return false
   }
 }
@@ -188,7 +190,9 @@ export const animate = (
       el[prop] = initialVal + delta * progressRatio
       if (progressTime < duration) {
         window.requestAnimationFrame(step)
-      } else {
+      } 
+      else 
+      {
         el[prop] = initialVal + delta 
         res()
       }

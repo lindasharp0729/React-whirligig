@@ -12,7 +12,6 @@ test('utils.values', () => {
   expect(u.values(o)).toEqual(e)
 })
 
-
 test('utils.minMap', () => {
   expect(u.minMap(1, 2, 3, 4)(5)).toBe(1)
 })
