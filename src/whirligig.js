@@ -164,7 +164,6 @@ export default class Whirligig extends React.Component {
     return false
   })(this.props.nextKeys, this.props.prevKeys)
 
-  // isAnimating state is the only important state value to the rendering of this component
   shouldComponentUpdate(nextProps, { isAnimating }) {
     const propValues = [...values(this.props), this.state.isAnimating]
     const nextPropValues = [...values(nextProps), isAnimating]
@@ -332,8 +331,8 @@ export default class Whirligig extends React.Component {
       flexFlow: 'row nowrap',
       justifyContent: 'space-between',
       overflowX: preventScrolling,
-      msOverflowStyle: '-ms-autohiding-scrollbar', // chrome like scrollbar experience for IE/Edge
-      position: 'relative', // makes .whirligig an offset parent
+      msOverflowStyle: '-ms-autohiding-scrollbar', 
+      position: 'relative', 
       transition: 'all .25s ease-in-quint',
       outline: 'none',
       WebkitOverflowScrolling: 'touch',
@@ -350,9 +349,6 @@ export default class Whirligig extends React.Component {
         {...props}
       >
         {
-          // We first pass the slide control functions to the function child.
-          // This will return the `children` that will be the content of the individual slides.
-          // Then we wrap the slide content in a slide component to add the functionality we need.
         }
         {React.Children.map(
           typeof children === 'function'
