@@ -16,9 +16,13 @@ const Slide = ({
       width: basis,
       marginLeft: gutter,
     }}
+
     {...props}
+
   >
+
     {children}
+    
   </div>
 )
 

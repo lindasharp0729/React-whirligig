@@ -45,9 +45,6 @@ export default class Whirligig extends React.Component {
       slideBy: this.props.slideBy || this.props.visibleSlides || 0,
     }
 
-    // We can't do arrow function properties for these since
-    // we are passing them to the consuming component and we
-    // require the proper context
     this.next = this.next.bind(this)
     this.prev = this.prev.bind(this)
     this.slideTo = this.slideTo.bind(this)
@@ -67,10 +64,6 @@ export default class Whirligig extends React.Component {
     this.DOMNode = findDOMNode(this.whirligig)
     this.isInteracting = hasOngoingInteraction(this.DOMNode)
 
-    // These are not a part of component state since we don't want
-    // incure the overhead of calling setState. They are either cached
-    // values or state only the onScrollEnd callback cares about and
-    // are not important to the rendering of the component.
     this.childCount =
       this.whirligig && this.whirligig.children
         ? this.whirligig.children.length
@@ -132,7 +125,6 @@ export default class Whirligig extends React.Component {
     this.eventListeners.forEach((fn) => typeof fn === 'function' && fn())
   }
 
-  // eslint-disable-next-line camelcase
   UNSAFE_componentWillReceiveProps({ slideBy, visibleSlides }) {
     if (
       slideBy !== this.props.slideBy ||

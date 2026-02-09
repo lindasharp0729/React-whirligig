@@ -50,7 +50,7 @@ export const onScrollStart = (cb, { target = window } = {}) => {
     () => {
       started = false
     },
-    { target }
+    {target}
   )
   const offScroll = onScroll(
     (e) => {
@@ -59,7 +59,7 @@ export const onScrollStart = (cb, { target = window } = {}) => {
         cb(e)
       }
     },
-    { target }
+    {target}
   )
 
   return () => {
@@ -189,7 +189,7 @@ export const animate = (
       if (progressTime < duration) {
         window.requestAnimationFrame(step)
       } else {
-        el[prop] = initialVal + delta // jump to end when animation is complete. necessary at least for immediate scroll
+        el[prop] = initialVal + delta 
         res()
       }
     }
