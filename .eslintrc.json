@@ -1,0 +1,16 @@
+{
+  "root": true,
+  "extends": [
+    "plugin:jane/recommended",
+    "plugin:jane/prettier",
+    "plugin:jane/react"
+  ],
+  "plugins": [
+    "jane"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
