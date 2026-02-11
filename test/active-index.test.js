@@ -1,14 +1,12 @@
 import * as React from 'react'
 import { mount } from 'enzyme'
 import Track from '../src/whirligig'
-
 test('activeIndex state', () => {
   const ai = ({ startAt, visibleSlides, infinite } = {}) => {
     let goNext
     let goPrev
     const next = () => goNext()
     const prev = () => goPrev()
-
     return {
       next,
       prev,
@@ -27,10 +25,8 @@ test('activeIndex state', () => {
       ),
     }
   }
-
   expect(ai().component.state('activeIndex')).toBe(0)
   expect(ai({ startAt: 3 }).component.state('activeIndex')).toBe(3)
-
   const nexted = ai({ visibleSlides: 3 })
   nexted.next()
   expect(nexted.component.state('activeIndex')).toBe(3)

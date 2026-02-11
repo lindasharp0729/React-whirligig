@@ -11,9 +11,7 @@ const tap = (msg) => (thing) => {
 
 test('Track afterSlide prop', () => {
   const wrapped = mount(<Track>{() => []}</Track>)
-
   expect(typeof wrapped.prop('afterSlide')).toBe('function')
-
   let next
   let prev
   let called = 0
@@ -23,7 +21,6 @@ test('Track afterSlide prop', () => {
   const a = () => {
     called++
   }
-
   mount(
     <Track afterSlide={a}>
       {(_next, _prev) => {

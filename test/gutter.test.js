@@ -30,16 +30,10 @@ test('gutter prop', () => {
       expect(Slide.prop('basis').match('1em')).toBeTruthy()
     })
 
-  /***
-   * If this seems weird, it's because it is. React propType validation error logs to the console.
-   * this unit test captures `console.error` and stores erverything called with it.
-   * we then check to make sure the correct number of calls were made, and that the values are correct.
-   */
   let errorLog = []
   console.error = (...msgs) => {
     errorLog = [...errorLog, ...msgs]
   }
   gutterTrack(1)
-  // t.equals(errorLog.length, 2, 'only one error per slide is logged')
-  // t.ok(errorLog[0].match(/valid css length unit/), 'the error matches the custom validation message')
+  
 })
